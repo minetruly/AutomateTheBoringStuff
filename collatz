@@ -2,6 +2,7 @@
 #Even numbers are divided by 2. Odd numbers are multiplied by 3, then increased by 1.
 #Keep doing this long enough, and you'll reach 1.
 # https://xkcd.com/710
+#Exit any time with CTRL-C
 
 import sys
 
