@@ -1,0 +1,28 @@
+#Apply math from the Collatz conjecture until the input number is reduced to 1.
+#Even numbers are divided by 2. Odd numbers are multiplied by 3, then increased by 1.
+#Keep doing this long enough, and you'll reach 1.
+# xkcd.com/710
+
+import sys
+
+def collatz(number):
+    while True:
+        if number == 1:
+            break
+        elif number%2 == 0: #even
+            print(number//2)
+            number = int(number//2)
+            continue
+        elif number%2 == 1: #odd
+            print(3 * number + 1)
+            number = int(3 * number + 1)
+            continue
+            
+collatz(int(input("Input a whole integer: ")))   
+
+while True:
+    again = input("Want do do it again? y/n ")
+    if again == ('y'):
+        collatz(int(input("Input another whole integer: ")))
+    else:
+        sys.exit("Bye Felicia")
